@@ -1,6 +1,6 @@
 package animals;
 
-public class Cat implements Feedable {
+public class Cat extends Pet implements Feedable {
 
     private String name;
     private boolean hungry;
@@ -27,6 +27,11 @@ public class Cat implements Feedable {
 
     public void setHungry(boolean hungry) {
         this.hungry = hungry;
+    }
+
+    @Override
+    public boolean isHappy() {
+        return false;
     }
 
     @Override

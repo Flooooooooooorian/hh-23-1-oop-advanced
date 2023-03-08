@@ -23,9 +23,9 @@ public class Main {
         myDog.setHungry(true);
         System.out.println(myDog);
 
-        Pet myPet = new Pet();
-
-        System.out.println(myPet);
+//        Pet myPet = new Pet("Olaf", 16.2, "weiß");
+//
+//        System.out.println(myPet);
 
     }
 }

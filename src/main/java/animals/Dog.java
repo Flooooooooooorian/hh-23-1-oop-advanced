@@ -19,6 +19,12 @@ public class Dog extends Pet implements Feedable {
         this.hungry = hungry;
     }
 
+
+    @Override
+    public boolean isHappy() {
+        return true;
+    }
+
     @Override
     public void feed(int amount) {
         if (amount >= 10) {

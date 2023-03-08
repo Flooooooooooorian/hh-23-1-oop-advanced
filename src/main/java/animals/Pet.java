@@ -1,6 +1,6 @@
 package animals;
 
-public class Pet {
+public abstract class Pet {
 
     protected String name;
     protected double weight;
@@ -39,6 +39,8 @@ public class Pet {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public abstract boolean isHappy();
 
     @Override
     public boolean equals(Object o) {
