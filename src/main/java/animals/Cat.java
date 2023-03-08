@@ -13,6 +13,11 @@ public class Cat extends Pet implements Feedable {
         this.hungry = hungry;
     }
 
+    public String animalSound() {
+        return "miau";
+    }
+
+
     public String getName() {
         return name;
     }

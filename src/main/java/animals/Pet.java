@@ -1,6 +1,6 @@
 package animals;
 
-public abstract class Pet {
+public class Pet {
 
     protected String name;
     protected double weight;
@@ -14,6 +14,10 @@ public abstract class Pet {
         this.name = name;
         this.weight = weight;
         this.color = color;
+    }
+
+    public String animalSound() {
+        return "animal sound";
     }
 
     public String getName() {
@@ -40,7 +44,9 @@ public abstract class Pet {
         this.color = color;
     }
 
-    public abstract boolean isHappy();
+    public boolean isHappy() {
+        return false;
+    }
 
     @Override
     public boolean equals(Object o) {

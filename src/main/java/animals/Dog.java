@@ -11,6 +11,10 @@ public class Dog extends Pet implements Feedable {
         this.hungry = hungry;
     }
 
+    public String animalSound() {
+        return "wuf";
+    }
+
     public boolean isHungry() {
         return hungry;
     }
