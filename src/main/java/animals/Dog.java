@@ -1,22 +1,14 @@
-public class Dog implements Feedable {
+package animals;
 
-    private String name;
+public class Dog extends Pet implements Feedable {
     private boolean hungry;
 
     public Dog() {
     }
 
-    public Dog(String name, boolean hungry) {
-        this.name = name;
+    public Dog(String name, double weight, String color, boolean hungry) {
+        super(name, weight, color);
         this.hungry = hungry;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public boolean isHungry() {
@@ -38,14 +30,14 @@ public class Dog implements Feedable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Dog dog)) return false;
+        if (!super.equals(o)) return false;
 
-        if (isHungry() != dog.isHungry()) return false;
-        return getName() != null ? getName().equals(dog.getName()) : dog.getName() == null;
+        return isHungry() == dog.isHungry();
     }
 
     @Override
     public int hashCode() {
-        int result = getName() != null ? getName().hashCode() : 0;
+        int result = super.hashCode();
         result = 31 * result + (isHungry() ? 1 : 0);
         return result;
     }
@@ -53,8 +45,10 @@ public class Dog implements Feedable {
     @Override
     public String toString() {
         return "Dog{" +
-                "name='" + name + '\'' +
-                ", hungry=" + hungry +
-                '}';
+                "hungry=" + hungry +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", color='" + color + '\'' +
+                "} ";
     }
 }

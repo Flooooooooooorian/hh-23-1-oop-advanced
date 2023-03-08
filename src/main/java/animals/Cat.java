@@ -1,3 +1,5 @@
+package animals;
+
 public class Cat implements Feedable {
 
     private String name;
@@ -52,7 +54,7 @@ public class Cat implements Feedable {
 
     @Override
     public String toString() {
-        return "Cat{" +
+        return "animals.Cat{" +
                 "name='" + name + '\'' +
                 ", hungry=" + hungry +
                 '}';
